@@ -600,16 +600,8 @@ video {
   display: flex;
 }
 
-.aspect-\[2\/3\] {
-  aspect-ratio: 2/3;
-}
-
 .min-h-screen {
   min-height: 100vh;
-}
-
-.w-2\/3 {
-  width: 66.666667%;
 }
 
 .items-center {
@@ -620,22 +612,8 @@ video {
   justify-content: center;
 }
 
-.bg-sky-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(224 242 254 / var(--tw-bg-opacity));
-}
-
 .p-0 {
   padding: 0px;
-}
-
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
-.font-bold {
-  font-weight: 700;
 }
 
 div {
