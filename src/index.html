@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="m-0 p-0 box-border" lang="en">
+<html class="m-0 box-border p-0" lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="output.css" />
     <script src="script.js" defer></script>
   </head>
-  <body class="min-h-screen flex justify-center items-center">
-    <div id="container" class=""></div>
+  <body class="flex min-h-screen w-full items-center justify-center">
+    <button class="self-start rounded-md bg-sky-300 p-2 hover:bg-sky-500">
+      Change Grid
+    </button>
+
+    <div
+      id="container"
+      class="flex aspect-square h-screen flex-wrap bg-red-800"
+    ></div>
   </body>
 </html>
