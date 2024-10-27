@@ -6,10 +6,11 @@ setGridSize(gridSize);
 
 button.addEventListener("click", () => {
   container.replaceChildren();
+  let oldGridSize = gridSize;
   gridSize = prompt("Input Grid Size");
   if (gridSize < 2 || gridSize > 100) {
     alert("Grid cannot be more than 100x100 or less than 2x2");
-    setGridSize(16);
+    setGridSize(oldGridSize);
   } else {
     setGridSize(gridSize);
   }
@@ -21,16 +22,16 @@ function setGridSize(gridSize) {
       const div = document.createElement("div");
       div.style.width = `${(1 / gridSize) * 100}%`;
       div.style.height = `${(1 / gridSize) * 100}%`;
-      div.className = "border flex-grow bg-blue-400";
+      div.className = "border flex-grow bg-gray-800";
       container.append(div);
     }
   }
 }
 
 container.addEventListener("mouseover", (event) => {
-  event.target.className += " bg-blue-900";
+  event.target.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`;
 
   setTimeout(() => {
-    event.target.classList.remove("bg-blue-900");
+    event.target.style.backgroundColor = "";
   }, 500);
 });
